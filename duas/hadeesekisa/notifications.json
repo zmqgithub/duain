@@ -1,0 +1,24 @@
+[
+  {
+    "en": {
+      "title": "Dua-e-Kumayl",
+      "message": "Download dua e Kumayl from aapstore",
+      "url_message": "Download from here"
+    },
+    "ur": {
+      "title": "دعاٗکمیل",
+      "message": "ڈاون لوڈ دعاٗکمیل",
+      "url_message": "یہاں سے ڈاونلوڈ کریں "
+    },
+    "hn": {
+      "title": "दुआए कुमैल ",
+      "message": "डाउनलोड दुआ ऐ कुमैल",
+      "url_message": "यहाँ से डाउनलोड करें "
+    },
+    "detail": {
+      "image": "kumayk_ic_launcher.png",
+      "app_url": "https://play.google.com/store/apps/details?id=com.ali.dua.kumayl",
+      "time": "02-11-2019 12:30 PM"
+    }
+  }
+]
