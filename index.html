@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Duas — Open Source Repository</title>
+  <meta name="description" content="This repository publishes duas and related texts as an open-source project. Download files and contribute." />
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#ffb86b; --muted:#98a0b3; --glass: rgba(255,255,255,0.03);
+      --radius:12px; --max-width:980px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;color:#e6eef6;background:linear-gradient(180deg,#071226 0%, #071630 100%);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:var(--max-width);margin:36px auto;padding:20px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:72px;height:72px;border-radius:14px;background:linear-gradient(135deg,#1f2937,#111827);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:28px}
+    p.lead{color:var(--muted);margin:8px 0 20px}
+
+    .card{background:var(--card);padding:20px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6);}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr} .logo{width:56px;height:56px}}
+
+    .download-list{list-style:none;padding:0;margin:0}
+    .download-list li{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:var(--glass);margin-bottom:10px}
+    .download-list li .meta{display:flex;flex-direction:column}
+    .download-list li .meta strong{font-size:15px}
+    .download-list li .meta small{color:var(--muted)}
+
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,#ffb86b,#ff8a66);color:#08101a;font-weight:600;text-decoration:none}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    .actions{display:flex;gap:8px;align-items:center}
+    .badge{font-size:12px;padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Du</div>
+      <div>
+        <h1>Duas — Open Source Repository</h1>
+        <p class="lead">This repository aims to publish duas and related texts for an open-source project. You can download the files below or contribute on GitHub.</p>
+      </div>
+    </header>
+
+    <main style="margin-top:20px">
+      <div class="grid">
+        <section class="card">
+          <h2 style="margin-top:0">About this repository</h2>
+          <p style="color:var(--muted)">We collect, curate, and publish duas (supplications) and short Islamic texts in plain text and PDF formats. All contributions are welcome — translations, transliterations, audio timestamps, or proofreading.</p>
+
+          <h3 style="margin-bottom:6px">How to download</h3>
+          <ol style="color:var(--muted)">
+            <li>Click a file from the list on the right (or the download button).</li>
+            <li>Files are served directly from the repository — you can also clone the repo to get everything at once.</li>
+            <li>See <strong>CONTRIBUTING.md</strong> in the repo for contribution guidelines.</li>
+          </ol>
+
+          <h3 style="margin-top:14px">Contributing</h3>
+          <p style="color:var(--muted)">Want to help? Fork the repo, add or improve files, then open a pull request. Use meaningful commit messages and include source/license information for any third-party material.</p>
+
+          <div style="margin-top:14px" class="actions">
+            <a class="btn" href="#" id="download-all">Download all (zip)</a>
+            <span class="badge">Open Source</span>
+          </div>
+
+          <footer>
+            <p>License: <strong>MIT</strong> (recommended). Replace with the project's actual license if different.</p>
+          </footer>
+        </section>
+
+        <aside>
+          <div class="card">
+            <h3 style="margin-top:0">Available files</h3>
+            <ul class="download-list">
+              <li>
+                <div class="meta">
+                  <strong>duas-collection.pdf</strong>
+                  <small>Comprehensive PDF — English & Arabic</small>
+                </div>
+                <div><a class="btn" href="#">Download</a></div>
+              </li>
+
+              <li>
+                <div class="meta">
+                  <strong>short-duas.txt</strong>
+                  <small>Plain text file with short duas</small>
+                </div>
+                <div><a class="btn" href="#">Download</a></div>
+              </li>
+
+              <li>
+                <div class="meta">
+                  <strong>transliteration.csv</strong>
+                  <small>Transliteration and translation table</small>
+                </div>
+                <div><a class="btn" href="#">Download</a></div>
+              </li>
+
+              <li>
+                <div class="meta">
+                  <strong>README.md</strong>
+                  <small>Repository overview & usage</small>
+                </div>
+                <div><a class="btn" href="#">View</a></div>
+              </li>
+            </ul>
+
+            <p style="color:var(--muted);margin-top:10px">Tip: replace the <code>#</code> hrefs with actual file URLs or GitHub raw links (e.g. <code>https://raw.githubusercontent.com/username/repo/main/files/short-duas.txt</code>).</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Example: wire download-all to a repo zip (replace with your repo URL)
+    document.getElementById('download-all').addEventListener('click', function(e){
+      e.preventDefault();
+      const repoZip = 'https://github.com/your-username/your-repo/archive/refs/heads/main.zip';
+      window.location.href = repoZip;
+    });
+  </script>
+</body>
+</html>
